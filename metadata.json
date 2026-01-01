@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Les Délices de Bouloc",
+  "description": "Site de commande en ligne moderne pour le restaurant Les Délices de Bouloc. Menu complet avec personnalisation de tacos, bowls, burgers et plus.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
