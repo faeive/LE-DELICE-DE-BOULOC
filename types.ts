@@ -1,5 +1,16 @@
 
-export type Category = 'TACOS' | 'BOWLS' | 'BURGERS' | 'SANDWICHS' | 'PANINIS' | 'ASSIETTES' | 'SALADES' | 'PETITES_FAIMS' | 'DESSERTS_BOISSONS';
+export type Category = 
+  | 'TACOS' 
+  | 'BOWLS' 
+  | 'BURGERS' 
+  | 'SANDWICHS' 
+  | 'PANINIS' 
+  | 'ASSIETTES' 
+  | 'SALADES' 
+  | 'PETITES_FAIMS' 
+  | 'DESSERTS_BOISSONS'
+  | 'TACOS_SANDWICHS'
+  | 'ASSIETTES_SALADES_BOWLS';
 
 export interface Extra {
   name: string;
@@ -23,6 +34,9 @@ export interface SelectedOptions {
   sauces: string[];
   extras: Extra[];
   gratinage?: Extra;
+  drinkChoice?: string;
+  withFries?: boolean;
+  withDrink?: boolean;
 }
 
 export interface CartItem {
@@ -38,6 +52,11 @@ export interface CartItem {
 export const MEATS = [
   "Tenders", "Nuggets", "Kebab", "Steak haché", "Merguez", 
   "Poulet mariné", "Kefta", "Crispy vegan"
+];
+
+export const SODA_BRANDS = [
+  "Coca-Cola", "Coca-Cola Zero", "Fanta Orange", "Fanta Citron", 
+  "Sprite", "Oasis Tropical", "Ice Tea Pêche", "Schweppes Agrum'", "Orangina"
 ];
 
 export const SAUCES = [
@@ -59,7 +78,6 @@ export const SAUCES = [
 export const TACO_EXTRAS = [
   { name: "Œuf", price: 1.50 },
   { name: "Fromage", price: 1.50 },
-  { name: "Viande supplémentaire", price: 2.00 },
   { name: "Steak", price: 2.00 },
   { name: "Galette de pomme de terre", price: 2.00 }
 ];
